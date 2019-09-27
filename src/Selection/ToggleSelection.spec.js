@@ -12,10 +12,10 @@ const render = createRenderer(ToggleSelection, defaultProps)
 describe('ToggleSelection', () => {
   describe('render', () => {
     const { tree } = render({})
-    it('has onClick rendered', () => {
+    it('has onChange rendered', () => {
       const input = tree.subTree('input')
-      const { onClick } = input.props
-      expect(onClick).toBeFunction()
+      const { onChange } = input.props
+      expect(onChange).toBeFunction()
     })
   })
   describe('interaction with selection', () => {
@@ -41,9 +41,9 @@ describe('ToggleSelection', () => {
         const { tree } = render(props)
         const input = tree.subTree('input')
         it(`Toggles: ${toggleMsg}`, () => {
-          const { onClick } = input.props
+          const { onChange } = input.props
 
-          onClick()
+          onChange()
           expect(update).toBeCalledWith(selection, toggleOn)
         })
         it(`Checkbox input is: ${checkBoxMsg}`, () => {

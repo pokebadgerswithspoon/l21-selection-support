@@ -1,14 +1,14 @@
 import React from 'react'
+import classsnames from 'classnames'
 
 // eslint-disable-next-line react/prop-types
-const Div = ({ margin, flex, children, ...rest }) => (
+const Div = ({ margin, flex, children, onClick, ...rest }) => (
   <div style={{
     ...(flex && { display: 'flex' }),
     ...(margin && { margin }),
   }}
-  {
-    ...rest
-  }
+  onClick={onClick}
+  className={classsnames(rest)}
   >
     {children}
   </div>

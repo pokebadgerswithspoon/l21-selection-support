@@ -1,7 +1,6 @@
 import React from 'react'
 import { number, string, oneOfType, arrayOf, bool, func } from 'prop-types'
 import Div from '../components/Div'
-import classnames from 'classnames'
 
 const propTypes = {
   enabled: bool,
@@ -36,11 +35,13 @@ const decor = (warning, enabled) => (enabled
 
 const SelectionState = ({ enabled, list, visible, title, warning, onClick }) => visible && (
   <Div
-    className={classnames('btn', 'btn-primary', decor(warning, enabled))}
+    btn
+    btn-primary
     {
     ...{
       title,
-      ...(enabled && onClick && { onClick: () => onClick(list) }),
+      ...(enabled && { onClick }),
+      ...decor(warning, enabled),
       ...(!enabled && { style: disabled }),
     }
   }
