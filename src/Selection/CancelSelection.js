@@ -1,6 +1,6 @@
 import { func, string } from 'prop-types'
 import React from 'react'
-import Button from './Button'
+import Button from '../components/Button'
 
 const propTypes = {
   cancel: func.isRequired,

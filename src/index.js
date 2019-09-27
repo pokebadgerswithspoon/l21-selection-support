@@ -6,11 +6,11 @@ import {
   SelectionCheckbox,
   CancelSelection,
   ToggleSelection,
-  Button,
 } from './Selection'
 import {
   SelectionCheckboxLabel
 } from './Selection/SelectionCheckbox'
+import Button from './components/Button'
 
 export {
   withSelection,

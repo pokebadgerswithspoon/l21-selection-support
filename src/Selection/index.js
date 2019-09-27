@@ -5,7 +5,6 @@ import SelectionCheckbox from './SelectionCheckbox'
 import withSelection from './withSelection'
 import CancelSelection from './CancelSelection'
 import ToggleSelection from './ToggleSelection'
-import Button from './Button'
 
 const SelectionCheckboxContainer = withSelection(SelectionCheckbox)
 const SelectionActionsContainer = withSelection(SelectionActions)
@@ -21,5 +20,4 @@ export {
   SelectionCheckboxContainer as SelectionCheckbox,
   CancelSelectionContainer as CancelSelection,
   ToggleSelectionContainer as ToggleSelection,
-  Button,
 }
