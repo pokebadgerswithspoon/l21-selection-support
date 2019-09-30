@@ -1,4 +1,4 @@
-import { createRenderer } from 'spec/helper'
+import { createRenderer } from '../spec/helper'
 import Button from './Button'
 
 const defaultProps = {

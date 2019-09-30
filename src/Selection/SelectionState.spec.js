@@ -1,5 +1,5 @@
-import { createRenderer } from 'spec/helper'
-import Div from 'components/Div'
+import { createRenderer } from '../spec/helper'
+import Div from '../components/Div'
 import SelectionState from './SelectionState'
 
 const defaultProps = {
