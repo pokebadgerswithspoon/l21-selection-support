@@ -1,5 +1,5 @@
 import React from 'react'
-import { createRenderer } from '../spec/helper'
+import { createRenderer } from 'src/spec/helper'
 import SelectionSupport, { SelectionContext } from './SelectionSupport'
 
 const children = <p>Hey!</p>

@@ -3,11 +3,11 @@ module.exports = {
   'roots': [
     '<rootDir>/src'
   ],
-  'transformIgnorePatterns': [
-    'node_modules/(?!(@capacitor)/)'
-  ],
   'transform': {
     '^.+\\.[t|j]sx?$': 'babel-jest'
+  },
+  'moduleNameMapper': {
+    '^src(.*)$': '<rootDir>/src/$1',
   },
   'setupFilesAfterEnv': ['jest-extended']
 }

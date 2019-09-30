@@ -1,6 +1,6 @@
 import React from 'react'
 import { number, string, oneOfType, arrayOf, bool, func } from 'prop-types'
-import Div from '../components/Div'
+import Div from 'src/components/Div'
 
 const propTypes = {
   enabled: bool,

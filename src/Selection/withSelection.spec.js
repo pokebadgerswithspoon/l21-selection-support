@@ -1,6 +1,6 @@
 import React from 'react'
-import { createRenderer } from '../spec/helper'
-import withMockContext from '../spec/mockContext'
+import { createRenderer } from 'src/spec/helper'
+import withMockContext from 'src/spec/mockContext'
 import withSelection from './withSelection'
 import { SelectionContext } from './SelectionSupport'
 

@@ -3,6 +3,7 @@ import commonjs from 'rollup-plugin-commonjs'
 import external from 'rollup-plugin-peer-deps-external'
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
+import importAlias from 'rollup-plugin-import-alias'
 
 import pkg from './package.json'
 
@@ -21,10 +22,16 @@ export default {
     }
   ],
   plugins: [
+    importAlias({
+      Paths: {
+        src: 'src/'
+      },
+      Extensions: ['js']
+    }),
     external(),
     url({ exclude: ['**/*.svg'] }),
     babel({
-      exclude: 'node_modules/**'
+      exclude: ['node_modules/**', 'example/**'],
     }),
     resolve(),
     commonjs()
