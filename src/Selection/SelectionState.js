@@ -43,8 +43,7 @@ const SelectionState = ({ enabled, list, visible, title, warning, onClick }) => 
       ...(enabled && { onClick }),
       ...decor(warning, enabled),
       ...(!enabled && { style: disabled }),
-    }
-  }
+    }}
   >✓ {list.length}
   </Div>
 )

@@ -16,7 +16,7 @@ const SelectionCheckbox = ({ value, isSelected, update }) => {
   return (
     <input
       id={idFor(value)}
-      type="checkbox"
+      type='checkbox'
       checked={checked}
       onChange={toggle}
       value={value}

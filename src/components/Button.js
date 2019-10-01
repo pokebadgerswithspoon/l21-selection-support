@@ -17,7 +17,7 @@ const defaultProps = {
 }
 const Button = ({ onClick, children, disabled, outline, style }) => (
   <button
-    type="button"
+    type='button'
     onClick={() => !disabled && onClick()}
     className={classNames('btn', 'btn-small', { 'btn-outline': outline })}
     disabled={disabled}

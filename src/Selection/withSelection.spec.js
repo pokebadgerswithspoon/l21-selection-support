@@ -10,7 +10,6 @@ const createSelectionAwareRenderer = selectionApi => withMockContext(
   ctx => (ctx === SelectionContext ? selectionApi : null),
 )(createRenderer(TestContainer, {}))
 
-
 describe('withSelection', () => {
   describe('outside <SelectionSupport/>', () => {
     const render = () => createSelectionAwareRenderer(null)
