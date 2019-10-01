@@ -1,6 +1,6 @@
 import React from 'react'
 import { bool, node, arrayOf, oneOfType, func } from 'prop-types'
-import createDiv from './createDiv'
+import Div from 'src/components/Div'
 
 const propTypes = {
   children: oneOfType([node, arrayOf(node)]),
@@ -10,8 +10,10 @@ const propTypes = {
 }
 const defaultProps = {
   children: [],
-  Actions: createDiv({flex: true, margin: '0 0 0.5em 0'}),
-  Action: createDiv({margin: '0 0.5em 0 0'}),
+  /* eslint-disable react/prop-types */
+  Actions: ({ children }) => <Div flex mb1>{children}</Div>,
+  Action: ({ children }) => <Div mr1>{children}</Div>,
+  /* eslint-enable react/prop-types */
 }
 const asArray = e => Array.isArray(e) ? e : [e]
 
@@ -26,7 +28,7 @@ const SelectionActions = ({ enabled, children, Actions, Action }) => {
     <Actions>
       {
         actions
-          .map((child, i) => (<Action key={keyFor(child, i)} mr1>{child}</Action>))
+          .map((child, i) => (<Action key={keyFor(child, i)}>{child}</Action>))
       }
     </Actions>
   )
